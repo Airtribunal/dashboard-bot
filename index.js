@@ -1,8 +1,8 @@
 const TelegramBot = require("node-telegram-bot-api");
+require('dotenv').config()
 
-const token = "6050687848:AAFl1zUnFaMhJ6K9ONMA60dxo-ouQjFG0xA";
-// const webAppUrl = "https://cdd1-185-12-224-117.ngrok-free.app/?name=ramazan&age=17";
-const webAppUrl = 'https://dashboard-frontend-tg.vercel.app/?name=Ramazan&age=17'
+const token = process.env.BOT_TOKEN_DEV;
+const webAppUrl = process.env.WEB_APP_URL_PROD
 const bot = new TelegramBot(token, { polling: true });
 
 
